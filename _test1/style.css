@@ -1,0 +1,15 @@
+*{
+	width: 99%;
+	height: 99%;
+	background-color: cyan;
+	box-sizing: border-box;
+}
+span{
+	display: inline-block;
+	font-size: 120px;
+}
+.text{
+	transform: translate(5.5%, 11%);
+	width: 90%; height: 80%;
+	border: 3px solid grey;
+}

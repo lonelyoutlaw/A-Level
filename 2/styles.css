@@ -1,0 +1,23 @@
+/*===============1===============*/
+blockquote:p{color: green;}
+/*===============2===============*/
+a[href^='https']{color: red;} /*1*/
+li:nth-child(4) a{background-color: green;}/*2*/
+ul + p{font-size: 26px;}/*3*/
+/*===============3===============*/
+.text-box h3:first-of-type{color: pink;}/*1*/
+#greycol{color: grey;}/*2*/
+div p:only-child{color: red;}/*3*/
+div ~ p{color: green;}/*4*/
+.yellow{color: yellow;}/*5*/
+/*===============4===============*/
+.bg-box{
+	height: 600px; width: 1200px;
+	background: url(img/lamp.png) center top / 30px 45px repeat-x border-box, 
+				url(img/house.jpg) center center / 596px 360px no-repeat border-box,
+				url(img/grass.png) center bottom / 120px 120px repeat-x border-box,
+				url(img/donut.png) center right / 32px 32px repeat-y border-box,
+				url(img/hedgehog.png) center left / 32px 32px repeat-y border-box;
+	background-color: green;
+	
+}

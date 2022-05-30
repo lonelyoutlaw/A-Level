@@ -1,0 +1,29 @@
+/*==========1==========*/
+*{box-sizing: border-box;}
+/*==========2==========*/
+.element{
+	/*1*/width: 350px;
+	/*2*/height: 220px;
+	/*3*/padding: 15px, 10px, 20px, 10px;
+	/*4*/margin-bottom: 30px;
+	/*5*/border: dashed red 2px;
+	/*6*/background: green;
+}
+/*==========3==========*/
+.text{
+	max-width: 50%;
+	text-align: justify;
+}
+#first{
+	height: 100px;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+#second{
+	height: 80px;
+	float: right;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+}

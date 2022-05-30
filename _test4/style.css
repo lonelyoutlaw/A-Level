@@ -1,0 +1,308 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    font-size: 14px;
+    line-height: auto;
+    vertical-align: top;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+    border-radius: 50%;
+}
+
+ul,
+ol{
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.wraper{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header{
+    padding: 15px 0;
+    background: #d2b837;
+    position: relative;
+}
+
+.header-wrap{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    display: inline-block;
+    max-width: 120px;
+    margin-right: 15px;
+}
+
+.logo svg{
+	height: 30px;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.burger-checkbox{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: -999999px;
+}
+
+.header-list{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    background: #d2b837;
+}
+
+.burger {
+    position: relative;
+    width: 26px;
+    height: 18px;
+    display: flex;
+   }
+
+.burger::before,
+.burger span,
+.burger:after {
+    position: absolute;
+    right: 0;
+    left: 0;
+    background: #000;
+    height: 2px;
+}
+
+.burger:before {
+    content: "";
+        top: 0;
+}
+
+.burger span {
+        top: 8px;
+}
+
+.burger:after {
+    content: "";
+    bottom: 0;
+}
+
+.burger-checkbox:checked + .burger span {
+    opacity: 0;
+}
+
+.burger-checkbox:checked +.burger::before {
+    transition: transform 0.3s ease-in;
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+.burger-checkbox:checked+.burger::after {
+    transition: transform 0.3s ease-in;
+    transform: rotate(-45deg);
+    bottom: 8px;
+}
+
+.burger-checkbox:checked ~ .header-list {
+    transition: opacity .3s ease-in;
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-item a{
+    color: green;
+    text-decoration: none;
+}
+
+.header-item a:hover{
+    color: hotpink;
+}
+
+.login-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: green;
+    color: white;
+    border: 1px solid green;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.header-btn{
+    margin-left: 15px;
+}
+
+.login-btn:hover{
+    background: white;
+    color: green;
+}
+
+
+.main{
+    flex-grow: 1;
+    display: flex;
+}
+
+.sidebar{
+    display: flex;
+    justify-content: center;
+    flex: 0 0 210px;
+    max-width: 210px;
+    width: 100%;
+    padding: 20px;
+}
+
+.sidebar-left{
+    background: #c798b9;
+}
+
+.sidebar-right{
+    background: #9cb1c7;
+    order: 1;
+}
+
+.content{
+    flex-grow: 1;
+    flex-shrink: 420px;
+    flex-basis: auto; */
+    width: calc(100% - 420px);
+    padding: 20px;
+    text-align: center;
+}
+
+.card-box h1{
+    text-transform: uppercase;
+}
+
+.card-wrap{
+    margin: 0 -5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col{
+    padding: 0 5px 10px;
+    flex: 1 0 33.33%;
+}
+
+.card{
+    border: 1px solid grey;
+    border-radius: 14px;
+    padding: 10px 15px;	
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card:hover{
+	background-color: #F9D9DE;
+}
+
+.card-img{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 8px solid #c7b7b7;
+    border-radius: 50%;
+}
+
+.card-header a{
+    color: black;
+    text-decoration: none;
+    flex-grow: 1;
+}
+
+.card-header a:hover{
+    opacity: 0.6;
+}
+
+.card-body{
+	flex-grow: 2;
+}
+
+.card-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    background: #685174;
+    color: white;
+    border: 1px solid #685174;
+    border-radius: 8px;
+    padding: 3px 8px;
+    line-height: 1;
+    align-self: flex-end;
+}
+
+.btn:hover{
+    background: white;
+    color: #685174;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: #86ec86;
+}
+
+@media (min-width: 1024px){
+    .burger{
+        display: none;
+    }
+
+    .header-item + .header-item{
+        padding-left: 15px;
+    }
+
+    .header-list{
+        text-align: center;
+        position: static;
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+    .header-item{
+        padding-bottom: 0;
+    }
+}

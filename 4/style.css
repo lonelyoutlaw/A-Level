@@ -1,0 +1,179 @@
+/*==========1==========*/
+.card{
+	background: #0d5825;
+	font-size: 25px;
+	width: 725px;
+	height: 669px;
+}
+p::before{
+	content: open-quote;
+	color: white;
+	font-size: 25px;
+}	
+p::after{
+	content: close-quote;
+	color: white;
+	font-size: 25px;
+}
+.card p{
+	color: white;
+	font-weight: bold;
+	transform: translate(13%, 10%);
+}
+.card cite{
+	display: inline-block;
+	color: white;
+	transform: translate(120%, -50%);
+}
+.card img{
+	width: 150px;
+	position: relative;
+}
+#one{
+	transform: translate(150%, 50%) rotate(-25deg);
+	transition: transform 0.3s;
+}	
+#two{
+	transform: translate(85%, 55%) rotate(-5deg);
+	transition: transform 0.3s;
+}
+#three{
+	transform: translate(15%, 60%) rotate(15deg);
+	transition: transform 0.3s;
+}
+#one:hover{
+	transform: translate(140%, 40%) rotate(-26deg);
+	transition: transform 0.3s;
+}
+#two:hover{
+	transform: translate(83%, 35%) rotate(-3deg);
+	transition: transform 0.3s;
+}
+#three:hover{
+	transform: translate(13%, 40%) rotate(13deg);
+	transition: transform 0.3s;
+}
+/*==========2==========*/
+.fig{
+	width: 500px;
+	height: 500px;
+	position: relative;
+	z-index: -1;
+}
+#box1{
+	width: 100px;
+	height: 100px;
+	background: indianred;
+	transform: translate(110%, 110%);
+	position: inherit;
+	z-index: 0;
+}
+#box2{
+	width: 100px;
+	height: 100px;
+	background: skyblue;
+	transform: translate(160%, 60%);
+	position: inherit;
+	z-index: 1;
+}
+#box3{
+	width: 100px;
+	height: 100px;
+	background: seagreen;
+	transform: translate(210%, 10%);
+	position: inherit;
+	z-index: 0;
+}
+/*==========3==========*/
+.menu{
+    background: gray;
+    width: 300px;
+    height: 500px;
+    color: white;
+    padding-top: 20px;
+    transition: 0.7s;
+    transform: translateX(-90%);
+}
+.menu:hover{
+    transform: translateX(-10%);
+}
+.menu p{
+    position: relative;
+    left: 45%;
+    top: 60%;
+    text-transform: uppercase;
+    transform: rotate(90deg);
+    transition: opacity 0.3s;
+}
+.menu:hover p{
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.menu a{
+    text-decoration-line: none;
+    color: white;
+    display: inline-block;
+    padding-top: 30px;
+}
+.menu a:hover{
+    color: orange;
+    transition: 0.3s;
+}
+.menu li{
+    list-style: none;
+    text-transform: uppercase;
+}
+.menu li::before{
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000;
+    background-color: orange;
+    margin-right: 10px;
+    transform: rotate(45deg);
+}
+/*==========4==========*/
+.animbox{
+	position: relative;
+	width: 300px;
+	height: 300px;
+}
+.box{
+	animation: squad 5s infinite;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100px;
+	background: red;
+}
+@keyframes squad{
+	0%{
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: red;
+	}
+	25%{
+		top: calc(100% - 100px);
+		left: 0;
+		background: blue;
+	}
+	50%{
+		top: calc(100% - 100px);
+		left: calc(100% - 100px);
+		background: green;
+	}
+	75%{
+		top: 0;
+		left: calc(100% - 100px);
+		background: yellow;
+	}
+	100%{
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: red;
+	}
+}

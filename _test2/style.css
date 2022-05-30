@@ -1,0 +1,54 @@
+.relative{
+	position: relative;
+	min-height: 30vh;
+}
+.absolute{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+.absolute:hover{
+	transition: all .3s ease-in-out;
+	transform: translate(-50%, -50%) rotate(180deg);
+}
+.sticky{
+	position: sticky;
+	top: 50px;
+	left: 50px;
+}
+.fixed{
+	position: fixed;
+	top: 100px;
+	right: 100px;
+}
+.box{
+	padding: 50px;
+}
+.btn{
+	transition: transform 1s ease-in;
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 18px;
+	line-height: 1;
+	color: white;
+	border: 1px solid green;
+	background: green;
+	border-radius: 6px;
+	text-decoration: none;
+}
+.btn:hover{
+	transition: all 1s ease-in;
+	background: white;
+	color: green;
+	transform: skew(-20deg);
+}
+.transform{
+	background: hotpink;
+	transform: skew(-20deg);
+	padding: 20px 60px;
+}
+.holder{
+	transform: skew(20deg);
+}
